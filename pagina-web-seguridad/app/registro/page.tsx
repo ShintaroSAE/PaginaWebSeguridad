@@ -29,12 +29,12 @@ export default function RegistroPage() {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-yellow-100 to-pink-100">
+    <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-gray-500 to-blue-900">
       <form
         onSubmit={handleSubmit}
-        className="bg-white p-8 rounded-2xl shadow-md w-96"
+        className="bg-gray-300 p-8 rounded-2xl shadow-md w-96"
       >
-        <h2 className="text-2xl font-bold text-pink-600 mb-4">Registro</h2>
+        <h2 className="text-2xl font-bold text-blue-800 mb-4">Registro</h2>
         <input
           type="text"
           name="nombre"
@@ -61,7 +61,7 @@ export default function RegistroPage() {
         />
         <button
           type="submit"
-          className="w-full bg-pink-600 text-white p-2 rounded hover:bg-pink-700"
+          className="w-full bg-blue-950 text-white p-2 rounded hover:bg-blue-800"
         >
           Crear cuenta
         </button>

@@ -45,7 +45,7 @@ export default function DashboardPage() {
   if (loading) return <p className="p-8">Cargando...</p>;
 
   return (
-    <div className="min-h-screen bg-gray-50 p-8">
+    <div className="min-h-screen bg-gray-500 p-8">
       {/* Header */}
       <div className="flex justify-between items-center mb-8">
         <h1 className="text-3xl font-bold text-gray-800">
@@ -53,7 +53,7 @@ export default function DashboardPage() {
         </h1>
         <button
           onClick={logout}
-          className="bg-red-600 text-white px-4 py-2 rounded-lg shadow hover:bg-red-700 transition"
+          className="bg-blue-900 text-white px-4 py-2 rounded-lg shadow hover:bg-gray-800 transition"
         >
           Cerrar sesión
         </button>
@@ -64,7 +64,7 @@ export default function DashboardPage() {
           {/* Perfil */}
           <div className="col-span-1 bg-white p-6 rounded-xl shadow">
             <div className="flex items-center space-x-4">
-              <div className="h-16 w-16 rounded-full bg-blue-600 text-white flex items-center justify-center text-2xl font-bold">
+              <div className="h-16 w-16 rounded-full bg-blue-700 text-white flex items-center justify-center text-2xl font-bold">
                 {user.nombre.charAt(0).toUpperCase()}
               </div>
               <div>

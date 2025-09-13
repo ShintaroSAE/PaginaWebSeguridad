@@ -26,11 +26,9 @@ export default function LoginPage() {
       const data = await res.json();
 
       if (res.ok) {
-        // Guardar token y rol
         localStorage.setItem("token", data.token);
         localStorage.setItem("role", data.user.role);
 
-        // Redirigir según rol
         if (data.user.role === "admin") {
           router.push("/admin");
         } else {
@@ -48,12 +46,12 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-yellow-100 to-pink-100">
+    <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-gray-500 to-blue-900">
       <form
         onSubmit={handleSubmit}
-        className="bg-white p-8 rounded-2xl shadow-md w-96"
+        className="bg-gray-300 p-8 rounded-2xl shadow-md w-96"
       >
-        <h2 className="text-2xl font-bold text-pink-600 mb-4">Login</h2>
+        <h2 className="text-2xl font-bold text-blue-800 mb-4">Login</h2>
         <input
           type="email"
           name="email"
@@ -72,7 +70,7 @@ export default function LoginPage() {
         />
         <button
           type="submit"
-          className="w-full bg-pink-600 text-white p-2 rounded hover:bg-pink-700"
+          className="w-full bg-blue-950 text-white p-2 rounded hover:bg-blue-800"
           disabled={loading}
         >
           {loading ? "Iniciando sesión..." : "Iniciar sesión"}

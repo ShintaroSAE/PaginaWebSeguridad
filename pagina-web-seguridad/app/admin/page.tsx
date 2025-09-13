@@ -134,7 +134,7 @@ export default function AdminPage() {
   if (loading) return <p className="p-8">Cargando...</p>;
 
   return (
-    <div className="p-8 bg-gray-50 min-h-screen">
+    <div className="p-8 bg-gray-500 min-h-screen">
       {/* Header */}
       <div className="flex justify-between items-center mb-8">
         <h1 className="text-4xl font-bold text-gray-800">
