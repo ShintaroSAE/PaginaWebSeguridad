@@ -3,23 +3,19 @@ import { MongoClient } from "mongodb";
 const uri = process.env.MONGODB_URI as string;
 const options = {};
 
-let client: MongoClient;
+let client;
 let clientPromise: Promise<MongoClient>;
 
 if (!process.env.MONGODB_URI) {
-  throw new Error("Error: se debe definir la variable MONGODB_URI en .env");
-}
-
-declare global {
-  var _mongoClientPromise: Promise<MongoClient> | undefined;
+  throw new Error("Por favor define la variable MONGODB_URI en .env.local");
 }
 
 if (process.env.NODE_ENV === "development") {
-  if (!global._mongoClientPromise) {
+  if (!(global as any)._mongoClientPromise) {
     client = new MongoClient(uri, options);
-    global._mongoClientPromise = client.connect();
+    (global as any)._mongoClientPromise = client.connect();
   }
-  clientPromise = global._mongoClientPromise;
+  clientPromise = (global as any)._mongoClientPromise;
 } else {
   client = new MongoClient(uri, options);
   clientPromise = client.connect();

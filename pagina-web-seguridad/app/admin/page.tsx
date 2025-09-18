@@ -142,7 +142,7 @@ export default function AdminPage() {
         </h1>
         <button
           onClick={logout}
-          className="bg-red-600 text-white px-4 py-2 rounded-lg shadow hover:bg-red-700 transition"
+          className="bg-blue-900 text-white px-4 py-2 rounded-lg shadow hover:bg-gray-800 transition"
         >
           Cerrar sesión
         </button>
