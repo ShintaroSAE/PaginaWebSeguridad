@@ -60,7 +60,7 @@ export default function DashboardPage() {
       </div>
 
       {user ? (
-        <div className="grid md:grid-cols-2 gap-50">
+        <div className="grid md:grid-cols-1 gap-50">
           {/* Perfil */}
           <div className="col-span-1 bg-white p-6 rounded-xl shadow">
             <div className="flex items-center space-x-4">
@@ -68,34 +68,17 @@ export default function DashboardPage() {
                 {user.nombre.charAt(0).toUpperCase()}
               </div>
               <div>
-                <p className="text-xl font-semibold text-gray-700">
+                <p className="text-x1 font-semibold text-gray-700">
                   {user.nombre}
                 </p>
                 <p className="text-gray-700">{user.email}</p>
               </div>
             </div>
             <div className="mt-4">
-              <span className="px-3 py-1 rounded-full text-sm font-medium bg-violet-300 text-gray-700">
+              <span className="px-3 py-1 rounded text-sm font-medium bg-violet-300 text-black">
                 Rol: {user.role}
               </span>
             </div>
-          </div>
-
-          {/* Estado de cuenta */}
-          <div className="col-span-1 bg-white p-6 rounded-xl shadow">
-            <h2 className="text-lg font-bold text-gray-700 mb-2">
-              Status
-            </h2>
-            <p className="text-gray-700">
-              Ultima Sesión:{" "}
-              <span className="font-semibold">
-                {new Date().toLocaleString()}
-              </span>
-            </p>
-            <p className="text-gray-700 mt-2">
-              Estado:{" "}
-              <span className="text-green-600 font-semibold">Online</span>
-            </p>
           </div> 
         </div>
       ) : (

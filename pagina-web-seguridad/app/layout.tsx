@@ -14,7 +14,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body className="font-sans bg-gray-700 text-gray-900">
-        <header className="bg-gray-400 shadow-md p-4 flex justify-between items-center">
+        <header className="bg-gray-300 shadow-md p-4 flex justify-between items-center">
           <Link href="/" className="text-2xl font-extrabold text-blue-700">
             WARFRAME POSTS
           </Link>

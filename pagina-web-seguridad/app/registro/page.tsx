@@ -63,7 +63,7 @@ export default function RegistroPage() {
           type="submit"
           className="w-full bg-blue-950 text-white p-2 hover:bg-blue-800"
         >
-          Crear cuenta
+          Registrarse
         </button>
       </form>
     </div>
