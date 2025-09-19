@@ -14,15 +14,15 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body className="font-sans bg-gray-700 text-gray-900">
-        <header className="bg-gray-300 shadow-md p-4 flex justify-between items-center">
-          <Link href="/" className="text-2xl font-bold  text-blue-600">
+        <header className="bg-gray-400 shadow-md p-4 flex justify-between items-center">
+          <Link href="/" className="text-2xl font-extrabold text-blue-700">
             WARFRAME POSTS
           </Link>
           <nav className="space-x-4">
-            <Link href="/registro" className="hover:text-blue-900 text-gray-600">
+            <Link href="/registro" className="hover:text-blue-900 font-bold text-black">
               Registro
             </Link>
-            <Link href="/login" className="hover:text-blue-900 text-gray-600">
+            <Link href="/login" className="hover:text-blue-900 font-bold text-black">
               Login
             </Link>
           </nav>

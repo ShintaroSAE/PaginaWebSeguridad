@@ -46,10 +46,10 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-gray-500 to-blue-900">
+    <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-gray-700 to-blue-900">
       <form
         onSubmit={handleSubmit}
-        className="bg-gray-300 p-8 rounded-2xl shadow-md w-96"
+        className="bg-gray-400 p-8 rounded-2xl shadow-md w-96"
       >
         <h2 className="text-2xl font-bold text-blue-800 mb-4">Login</h2>
         <input
@@ -57,7 +57,7 @@ export default function LoginPage() {
           name="email"
           placeholder="Correo"
           onChange={handleChange}
-          className="w-full p-2 border rounded mb-3 text-gray-900 placeholder-gray-400"
+          className="w-full p-2 border mb-3 text-gray-900 placeholder-gray-200"
           required
         />
         <input
@@ -65,12 +65,12 @@ export default function LoginPage() {
           name="password"
           placeholder="Contraseña"
           onChange={handleChange}
-          className="w-full p-2 border rounded mb-3 text-gray-900 placeholder-gray-400"
+          className="w-full p-2 border mb-3 text-gray-900 placeholder-gray-200"
           required
         />
         <button
           type="submit"
-          className="w-full bg-blue-950 text-white p-2 rounded hover:bg-blue-800"
+          className="w-full bg-blue-950 text-white p-2 hover:bg-blue-800"
           disabled={loading}
         >
           {loading ? "Iniciando sesión..." : "Iniciar sesión"}
